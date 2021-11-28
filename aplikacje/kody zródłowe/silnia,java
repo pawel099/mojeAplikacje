@@ -1,0 +1,21 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+ 
+public class Silnia 
+{
+    public static void main(String[] args) throws NumberFormatException,IOException 
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n;
+        int silnia = 1;
+        System.out.println("Wprowadź liczbę z której ma być obliczona silnia: ");
+        n = Integer.parseInt(reader.readLine());
+        while (n > 1) 
+        {
+            silnia = silnia * n;
+            n -= 1;
+        }
+        System.out.println("Silnia z podanej liczby to: " + silnia);
+    }
+}
